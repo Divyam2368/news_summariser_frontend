@@ -1,5 +1,6 @@
 import type { FeedResponse, SearchResponse } from '../types';
 
+// env var must start with VITE
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 export async function fetchLatestNews(): Promise<FeedResponse> {
