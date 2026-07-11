@@ -1,6 +1,6 @@
 import type { FeedResponse, SearchResponse } from '../types';
 
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export async function fetchLatestNews(): Promise<FeedResponse> {
   const res = await fetch(`${BASE_URL}/api/news/latest`);
